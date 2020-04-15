@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <title>Yandex API - Translate</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="margin-top:5%;">
+            <div class="col s8" style="margin-left:15%;">
+                <div id="main" class="card">
+                    <div class="card-content">
+                        <span class="card-title">Yandex API - Translate APP</span>
+                        <div class="row">
+                            <form id="translate-form">
+                                <div class="input-field col s8">
+                                    <input type="text" name="word" id="word" value="Necəsən">
+                                    <label for="task">Tərcümə ediləcək söz</label>
+                                </div>
+
+                                <div class="input-field col s8">
+                                    <select id="language">
+                                        <option value="en">İngilis</option>
+                                        <option value="az">Azərbaycan</option>
+                                        <option value="de">Alman</option>
+                                        <option value="es">İspan</option>
+                                    </select>
+                                </div>
+
+
+                                <input type="submit" value="Tərcümə et" class="btn col s8">
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" style="display: flex;" >
+                        <img src="images/en.png" id="outputImage" height="50px" width="50px" style="margin-top:10px;margin-left:10px;">
+                        <span class="card-title" id="outputLanguage" style="align-self: center; margin-left: 5px;" >İngilis</span>
+
+                    </div>
+                    <div class="card-content">
+                        <h5>Tərcümə edilmiş söz: <br/> <span id="outputWord" style="color :red;"> How are you ?</span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+
+    <script src="ui.js"></script>
+    <script src="translate.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
